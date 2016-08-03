@@ -1,0 +1,125 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // USER LIST
+        h2 User List
+        #userList
+            table
+                thead
+                    th Date
+                    th DayRating
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        
+
+        // USER INFO
+        #userInfo
+            h2 Lifelog Data
+                br
+                br
+                strong Date:
+                |  <span id='Date'></span>
+                br
+                br
+                strong Sleep
+                br
+                p Start:
+                |  <span id='llSleepStart'></span>
+                p End:
+                |  <span id='llSleepEnd'></span>
+                br
+                br
+                strong Excercise
+                br
+                p Activity:
+                |  <span id='llExerciseActivity'></span>
+                p Time:
+                |  <span id='llExerciseTime'></span>
+                br
+                br
+                strong Diet
+                br
+                strong Breakfast
+                br
+                p Breakfast Food:
+                |  <span id='llBreakfastFood'></span>
+                p Breakfast Health Score:
+                |  <span id='llBreakfastHealthScore'></span>
+                p Breakfast Cost:
+                |  <span id='llBreakfastHealthScore'></span>
+                br
+                strong Lunch
+                br
+                p Lunch Food:
+                |  <span id='llLunchFood'></span>
+                p Lunch Health Score:
+                |  <span id='llLunchHealthScore'></span>
+                p Lunch Cost:
+                |  <span id='llLunchHealthScore'></span>
+                br
+                p Dinner Food:
+                |  <span id='llDinnerFood'></span>
+                p Dinner Health Score:
+                |  <span id='llDinnerHealthScore'></span>
+                p Dinner Cost:
+                |  <span id='llDinnerHealthScore'></span>
+                br
+                br
+                strong Movies
+                br
+                p Title:
+                |  <span id='llMovieTitle'></span>
+                p Director:
+                |  <span id='llMovieDirector'></span>
+                br
+                br
+                strong Music
+                br
+                p Title:
+                |  <span id='llMusicTitle'></span>
+                p Artist:
+                |  <span id='llMusicDirector'></span>
+                br
+                br
+                strong Video Games
+                br
+                p Title:
+                |  <span id='llVGCreator'></span>
+                p Artist:
+                |  <span id='llVGCreator'></span>
+                br
+                br
+                strong Purchases
+                br
+                p Item:
+                |  <span id='llPurchaseItem'></span>
+                p Location:
+                |  <span id='llPurchaseLocation'></span>
+                p Cost:
+                |  <span id='llPurchaseCost'></span>
+                p Time:
+                |  <span id='llPurchaseTime'></span>
+                br
+                br
+                strong Websites
+                br
+                p Page Name:
+                |  <span id='llVGCreator'></span>
+                p URL:
+                |  <span id='llVGCreator'></span>
+                br
+                br
+                p Day Rating:
+                |  <span id='llVGCreator'></span>
+
+        // /USER INFO
+
+    // /WRAPPER

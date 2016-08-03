@@ -1,0 +1,71 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // ADD USER
+        h2 Enter Lifelog Data
+        #addUser
+            fieldset
+
+                p Date
+                input#inputDate(type='date', placeholder='Date')
+                br
+                p Sleep
+                input#inputSleepStart(type='time', placeholder='Start')
+                input#inputSleepEnd(type='time', placeholder='End')
+                br
+                p Exercise
+                input#inputExerciseActivity(type='text', placeholder='Activity')
+                input#inputExerciseTime(type='number', placeholder='Time(Minutes)')
+                br
+                p Diet
+                input#inputDietBreakfastFood(type='text', placeholder='BreakfastFood')
+                input#inputDietBreakfastHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietBreakfastCost(type='number', placeholder='Cost')
+                br
+                input#inputDietLunchFood(type='text', placeholder='LunchFood')
+                input#inputDietLunchHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietLunchCost(type='number', placeholder='Cost')
+                br
+                input#inputDietDinnerFood(type='text', placeholder='DinnerFood')
+                input#inputDietDinnerHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietDinnerCost(type='number', placeholder='Cost')
+                br
+                p Movies
+                input#inputMovieTitle(type='text', placeholder='Title')
+                input#inputMovieDirector(type='text', placeholder='Director')
+                br
+                p Music
+                input#inputMusicTitle(type='text', placeholder='Title')
+                input#inputMusicArtist(type='text', placeholder='Artist')
+                br
+                p Reading
+                input#inputReadingTitle(type='text', placeholder='Title')
+                input#inputReadingAuthor(type='text', placeholder='Author')
+                br
+                p Video Games
+                input#inputVGTitle(type='text', placeholder='Title')
+                input#inputVGCreator(type='text', placeholder='Creator')
+                br
+                p Purchases
+                input#inputPurchaseItem(type='text', placeholder='Item')
+                input#inputPurchaseLocation(type='text', placeholder='Location')
+                input#inputPurchaseCost(type='number', placeholder='Cost')
+                input#inputPurchaseTime(type='time', placeholder='Time')
+                br
+                p Websites
+                input#inputWebsitePageName(type='text', placeholder='PageName')
+                input#inputWebsiteURL(type='text', placeholder='URL')
+                br
+                p Day Rating (1-10)
+                input#inputDayRating(type='text', placeholder='Rating')
+                br
+                button#btnAddUser Add User
+        // /ADD USER
+
+    // /WRAPPER
