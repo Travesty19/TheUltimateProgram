@@ -65,7 +65,7 @@ function showUserInfo(event) {
     $('#llDate').text(thisUserObject.date);
     $('#llSleepStart').text(thisUserObject.sleepstart);
     $('#llSleepEnd').text(thisUserObject.sleepend);
-    $('#llExcerciseActivity').text(thisUserObject.exerciseactivity);
+    $('#llExerciseActivity').text(thisUserObject.exerciseactivity);
     $('#llExerciseTime').text(thisUserObject.exercisetime);
     $('#llDietBreakfastFood').text(thisUserObject.dietbreakfastfood);
     $('#llDietBreakfastHealthScore').text(thisUserObject.dietbreakfasthealthscore);
