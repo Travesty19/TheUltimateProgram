@@ -7,60 +7,146 @@ block content
     // Wrapper
     #wrapper
 
+
+
         // ADD USER
-        h2 Enter Lifelog Data
+        h2 Add User
         #addUser
             fieldset
-
-                p Date
-                input#inputDate(type='date', placeholder='Date')
+                input#inputDate(type='text', placeholder='Date')
                 br
                 p Sleep
-                input#inputSleepStart(type='time', placeholder='Start')
-                input#inputSleepEnd(type='time', placeholder='End')
+                input#inputSleepStart(type='text', placeholder='StartTime')
+                input#inputSleepEnd(type='text', placeholder='EndTime')
                 br
                 p Exercise
                 input#inputExerciseActivity(type='text', placeholder='Activity')
-                input#inputExerciseTime(type='number', placeholder='Time(Minutes)')
+                input#inputExerciseReps(type='text', placeholder='Reps')
+                input#inputExerciseLocation(type='text', placeholder='Location')
+                input#inputExerciseStart(type='text', placeholder='Start')
+                input#inputExerciseEnd(type='text', placeholder='End')
                 br
                 p Diet
                 input#inputDietBreakfastFood(type='text', placeholder='BreakfastFood')
-                input#inputDietBreakfastHealthScore(type='number', placeholder='HealthScore')
-                input#inputDietBreakfastCost(type='number', placeholder='Cost')
+                input#inputDietBreakfastHealthScore(type='text', placeholder='HealthScore')
+                input#inputDietBreakfastCost(type='text', placeholder='Cost')
+                input#inputDietBreakfastLocation(type='text', placeholder='Location')
+                input#inputDietBreakfastStart(type='text', placeholder='Start')
+                input#inputDietBreakfastEnd(type='text', placeholder='End')
+
                 br
                 input#inputDietLunchFood(type='text', placeholder='LunchFood')
-                input#inputDietLunchHealthScore(type='number', placeholder='HealthScore')
-                input#inputDietLunchCost(type='number', placeholder='Cost')
+                input#inputDietLunchHealthScore(type='text', placeholder='HealthScore')
+                input#inputDietLunchCost(type='text', placeholder='Cost')
+                input#inputDietLunchLocation(type='text', placeholder='Location')
+                input#inputDietLunchStart(type='text', placeholder='Start')
+                input#inputDietLunchEnd(type='text', placeholder='End')
                 br
                 input#inputDietDinnerFood(type='text', placeholder='DinnerFood')
-                input#inputDietDinnerHealthScore(type='number', placeholder='HealthScore')
-                input#inputDietDinnerCost(type='number', placeholder='Cost')
+                input#inputDietDinnerHealthScore(type='text', placeholder='HealthScore')
+                input#inputDietDinnerCost(type='text', placeholder='Cost')
+                input#inputDietDinnerLocation(type='text', placeholder='Location')
+                input#inputDietDinnerStart(type='text', placeholder='Start')
+                input#inputDietDinnerEnd(type='text', placeholder='End')
                 br
                 p Movies
                 input#inputMovieTitle(type='text', placeholder='Title')
                 input#inputMovieDirector(type='text', placeholder='Director')
+                input#inputMovieRating(type='text', placeholder='Rating (out of 10)')
+                input#inputMovieThoughts(type='text', placeholder='Thoughts')
+                input#inputMovieStart(type='text', placeholder='Start')
+                input#inputMovieEnd(type='text', placeholder='End')
                 br
                 p Music
                 input#inputMusicTitle(type='text', placeholder='Title')
                 input#inputMusicArtist(type='text', placeholder='Artist')
+                input#inputMusicRating(type='text', placeholder='Rating (out of 10)')
+                input#inputMusicThoughts(type='text', placeholder='Thoughts')
+                input#inputMusicStart(type='text', placeholder='Start')
+                input#inputMusicEnd(type='text', placeholder='End')
                 br
                 p Reading
                 input#inputReadingTitle(type='text', placeholder='Title')
                 input#inputReadingAuthor(type='text', placeholder='Author')
+                input#inputReadingRating(type='text', placeholder='Rating (out of 10)')
+                input#inputReadingThoughts(type='text', placeholder='Thoughts')
+                input#inputReadingStart(type='text', placeholder='Start')
+                input#inputReadingEnd(type='text', placeholder='End')
                 br
                 p Video Games
                 input#inputVGTitle(type='text', placeholder='Title')
                 input#inputVGCreator(type='text', placeholder='Creator')
+                input#inputVGRating(type='text', placeholder='Rating (out of 10)')
+                input#inputVGThoughts(type='text', placeholder='Thoughts')
+                input#inputVGAchivements(type='text', placeholder='Achivements')
+                input#inputVGStart(type='text', placeholder='Start')
+                input#inputVGEnd(type='text', placeholder='End')
                 br
                 p Purchases
                 input#inputPurchaseItem(type='text', placeholder='Item')
                 input#inputPurchaseLocation(type='text', placeholder='Location')
-                input#inputPurchaseCost(type='number', placeholder='Cost')
-                input#inputPurchaseTime(type='time', placeholder='Time')
+                input#inputPurchaseCost(type='text', placeholder='Cost')
+                input#inputPurchaseTime(type='text', placeholder='Time')
                 br
                 p Websites
                 input#inputWebsitePageName(type='text', placeholder='PageName')
                 input#inputWebsiteURL(type='text', placeholder='URL')
+                input#inputWebsiteTime(type='text', placeholder='Time')
+                br
+                p Conversations
+                input#inputConversationPerson(type='text', placeholder='Person(s)')
+                input#inputConversationTopic(type='text', placeholder='Topic(s)')
+                input#inputConversationThoughts(type='text', placeholder='Thoughts')
+                input#inputConversationLocation(type='text', placeholder='Location')
+                input#inputConversationStart(type='text', placeholder='Start')
+                input#inputConversationEnd(type='text', placeholder='End')
+                br
+                p Career
+                input#inputCareerTask(type='text', placeholder='Task')
+                input#inputCareerNotes(type='text', placeholder='Notes')
+                input#inputCareerCompleted(type='text', placeholder='% Completed')
+                input#inputCareerStart(type='text', placeholder='Start')
+                input#inputCareerEnd(type='text', placeholder='End')
+                br
+                p Hygein
+                br
+                p Shower?
+                input#inputHygeinShower(type='text', placeholder='Shower? (y/n)')
+                input#inputHygeinShowerStart(type='text', placeholder='Start')
+                input#inputHygeinShowerEnd(type='text', placeholder='End')
+                br
+                input#inputHygeinBrushteeth(type='text', placeholder='Brushteeth?')
+                input#inputHygeinFloss(type='text', placeholder='Floss?')
+                input#inputHygeinBrushStart(type='text', placeholder='Start')
+                input#inputHygeinBrushEnd(type='text', placeholder='End')
+                br
+                input#inputHygeinNails(type='text', placeholder='Nails?')
+                input#inputHygeinToenails(type='text', placeholder='Toenails?')
+                input#inputHygeinNailsStart(type='text', placeholder='Start')
+                input#inputHygeinNailsEnd(type='text', placeholder='End')
+                br
+                p Sex
+                input#inputSexPerson(type='text', placeholder='Person')
+                input#inputSexPosition(type='text', placeholder='Position')
+                input#inputSexRating(type='text', placeholder='Rating')
+                input#inputSexThoughts(type='text', placeholder='Thoughts')
+                input#inputSexLocation(type='text', placeholder='Location')
+                input#inputSexStart(type='text', placeholder='Start')
+                input#inputSexEnd(type='text', placeholder='End')
+                br
+                p Programming
+                input#inputProgrammingTask(type='text', placeholder='Task')
+                input#inputProgrammingDifficulity(type='text', placeholder='Difficulity')
+                input#inputProgrammingSolution(type='text', placeholder='Solution')
+                input#inputProgrammingStart(type='text', placeholder='Start')
+                input#inputProgrammingEnd(type='text', placeholder='End')
+                br
+                p Writing 
+                input#inputWritingEntry(type='text', placeholder='Entry')
+                input#inputWritingType(type='text', placeholder='Type (Journal,ect)')
+                br
+                p Upload
+                input#inputUpload(type='text', placeholder='fileToUpload')
                 br
                 p Day Rating (1-10)
                 input#inputDayRating(type='text', placeholder='Rating')

@@ -7,7 +7,9 @@ var bodyParser = require('body-parser');
 // Database
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/UP');
+var uri = 'localhost:27017/UP';
+var uri = 'mongodb://heroku_5mkk79rv:pstcp2u20hiip964460qsrl1o@ds017258.mlab.com:17258/heroku_5mkk79rv';
+var db = monk(uri);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

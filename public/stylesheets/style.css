@@ -1,6 +1,6 @@
 body {
   padding: 30px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -12,7 +12,6 @@ a {
 }
 
 #wrapper {
-	padding-left:312px;
 	position:relative;
 }
 
@@ -23,6 +22,11 @@ a {
 		border-collapse:separate;
 		border-spacing:1px;
 		background:#CCC;
+		position: absolute;
+    	right: 0px;
+   		width: 300px;
+    	border: 3px solid #73AD21;
+    	padding: 10px;
 	}
 		#userList table th {
 			background:#EEE;
@@ -42,14 +46,71 @@ a {
 			}
 
 #userInfo {
-	width:250px;
+	width:1000px;
 	position:absolute;
 	top:100; left:0;
 }
 	#userInfo p {
 		padding:15px;
+		font-size: 150%;
 		
 	}
+
+#title {
+	clear: left;
+    font-weight: bold;	
+    padding-bottom: 20px;
+    font-size: 125%;
+
+}
+
+#test {
+	clear: left;
+	text-decoration: underline;
+    font-weight: bold;
+    padding-top: 20px;
+	padding-bottom: 20px;
+
+
+}
+
+#test0 {
+	clear: left;
+    font-weight: bold;	
+    padding-bottom: 20px;
+    font-style: italic;
+
+}
+
+#test1 {
+	clear: left;
+    font-weight: bold;
+    padding-top: 50px;	
+    padding-bottom: 20px;
+    font-style: italic;
+
+}
+
+#test2 {
+	display:inline-block;
+	padding-left: 5px;
+}
+
+#test3 {
+	color: red;
+	display:inline-block;
+	padding-left: 5px;
+	font-style: normal;
+
+	
+}
+
+#test4 {
+	display:inline-block;
+	padding-left: 20px;
+}
+
+
 
 fieldset {
 	border:0;

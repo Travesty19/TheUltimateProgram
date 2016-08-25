@@ -1,14 +1,15 @@
 extends layout
 
 block content
-    h1= title
+    <a href="/">LifeLog</a>
+    <a href="/data">Data</a>
     p Welcome to our test
+    
 
     // Wrapper
     #wrapper
 
         // USER LIST
-        h2 User List
         #userList
             table
                 thead
@@ -22,103 +23,257 @@ block content
 
         // USER INFO
         #userInfo
-            h2 Lifelog Data
+            h2 Date: 
+                #test3 <span id='llDate'></span>
+                br
+                #test Sleep
+                br
+                #test2 Start:
+                #test3 <span id='llSleepStart'></span>
+                #test4 End:
+                #test3 <span id='llSleepEnd'></span>
                 br
                 br
-                strong Date:
-                |  <span id='llDate'></span>
+                #test Excercise
+                br
+                #test2 Activity:
+                #test3  <span id='llExerciseActivity'></span>
+                #test4 Reps:
+                #test3  <span id='llExerciseReps'></span>
+                #test4 Location:
+                #test3  <span id='llExerciseLocation'></span>
+                #test4 Start:
+                #test3  <span id='llExerciseStart'></span>
+                #test4 End:
+                #test3  <span id='llExerciseEnd'></span>
                 br
                 br
-                strong Sleep
+                #test Diet
                 br
-                p Start:
-                |  <span id='llSleepStart'></span>
-                p End:
-                |  <span id='llSleepEnd'></span>
+                #test2 Breakfast Food:
+                #test3  <span id='llDietBreakfastFood'></span>
+                #test4 Health Score:
+                #test3 <span id='llDietBreakfastHealthScore'></span>
+                #test4 Cost:
+                #test3 <span id='llDietBreakfastCost'></span>
+                #test4 Location:
+                #test3 <span id='llDietBreakfastLocation'></span>
+                #test4 Start:
+                #test3 <span id='llDietBreakfastStart'></span>
+                #test4 End:
+                #test3 <span id='llDietBreakfastEnd'></span>
                 br
+                #test2 Lunch Food:
+                #test3 <span id='llDietLunchFood'></span>
+                #test4 Health Score:
+                #test3  <span id='llDietLunchHealthScore'></span>
+                #test4 Cost:
+                #test3 <span id='llDietLunchCost'></span>
+                #test4 Location:
+                #test3 <span id='llDietLunchLocation'></span>
+                #test4 Start:
+                #test3 <span id='llDietLunchStart'></span>
+                #test4 End:
+                #test3 <span id='llDietLunchEnd'></span>
                 br
-                strong Excercise
-                br
-                p Activity:
-                |  <span id='llExerciseActivity'></span>
-                p Time:
-                |  <span id='llExerciseTime'></span>
-                br
-                br
-                strong Diet
-                br
-                strong Breakfast
-                br
-                p Breakfast Food:
-                |  <span id='llDietBreakfastFood'></span>
-                p Breakfast Health Score:
-                |  <span id='llDietBreakfastHealthScore'></span>
-                p Breakfast Cost:
-                |  <span id='llDietBreakfastHealthScore'></span>
-                br
-                strong Lunch
-                br
-                p Lunch Food:
-                |  <span id='llDietLunchFood'></span>
-                p Lunch Health Score:
-                |  <span id='llDietLunchHealthScore'></span>
-                p Lunch Cost:
-                |  <span id='llDietLunchHealthScore'></span>
-                br
-                p Dinner Food:
-                |  <span id='llDietDinnerFood'></span>
-                p Dinner Health Score:
-                |  <span id='llDietDinnerHealthScore'></span>
-                p Dinner Cost:
-                |  <span id='llDietDinnerHealthScore'></span>
+                #test2 Dinner Food:
+                #test3  <span id='llDietDinnerFood'></span>
+                #test4 Health Score:
+                #test3 <span id='llDietDinnerHealthScore'></span>
+                #test4 Cost:
+                #test3  <span id='llDietDinnerCost'></span>
+                #test4 Location:
+                #test3  <span id='llDietDinnerLocation'></span>
+                #test4 Start:
+                #test3  <span id='llDietDinnerStart'></span>
+                #test4 End:
+                #test3  <span id='llDietDinnerEnd'></span>
                 br
                 br
-                strong Movies
+                #test Movies
                 br
-                p Title:
-                |  <span id='llMovieTitle'></span>
-                p Director:
-                |  <span id='llMovieDirector'></span>
-                br
-                br
-                strong Music
-                br
-                p Title:
-                |  <span id='llMusicTitle'></span>
-                p Artist:
-                |  <span id='llMusicDirector'></span>
-                br
-                br
-                strong Video Games
-                br
-                p Title:
-                |  <span id='llVGCreator'></span>
-                p Artist:
-                |  <span id='llVGCreator'></span>
+                #test2 Title:
+                #test3 <span id='llMovieTitle'></span>
+                #test4 Director:
+                #test3  <span id='llMovieDirector'></span>
+                #test4 Rating:
+                #test3  <span id='llMovieRating'></span>
+                #test4 Thoughts:
+                #test3  <span id='llMovieThoughts'></span>
+                #test4 Start:
+                #test3  <span id='llMovieStart'></span>
+                #test4 End:
+                #test3  <span id='llMovieEnd'></span>
                 br
                 br
-                strong Purchases
+                #test Music
                 br
-                p Item:
-                |  <span id='llPurchaseItem'></span>
-                p Location:
-                |  <span id='llPurchaseLocation'></span>
-                p Cost:
-                |  <span id='llPurchaseCost'></span>
-                p Time:
-                |  <span id='llPurchaseTime'></span>
+                #test2 Title:
+                #test3  <span id='llMusicTitle'></span>
+                #test4 Artist:
+                #test3 <span id='llMusicArtist'></span>
+                #test4 Rating:
+                #test3 <span id='llMusicRating'></span>
+                #test4 Thoughts:
+                #test3 <span id='llMusicThoughts'></span>
+                #test4 Start:
+                #test3 <span id='llMusicStart'></span>
+                #test4 End:
+                #test3 <span id='llMusicEnd'></span>
+                br
+                #test Reading
+                br
+                #test2 Title:
+                #test3  <span id='llReadingTitle'></span>
+                #test4 Author:
+                #test3 <span id='llReadingAuthor'></span>
+                #test4 Rating:
+                #test3 <span id='llReadingRating'></span>
+                #test4 Thoughts:
+                #test3 <span id='llReadingThoughts'></span>
+                #test4 Start:
+                #test3 <span id='llReadingStart'></span>
+                #test4 End:
+                #test3 <span id='llReadingEnd'></span>
+                br
+                #test Video Games
+                br
+                #test2 Title:
+                #test3  <span id='llVGTitle'></span>
+                #test4 Creator:
+                #test3 <span id='llVGCreator'></span>
+                #test4 Rating:
+                #test3 <span id='llVGRating'></span>
+                #test4 Thoughts:
+                #test3 <span id='llVGThoughts'></span>
+                #test4 Achivements:
+                #test3 <span id='llVGAchivements'></span>
+                #test4 Start:
+                #test3 <span id='llVGStart'></span>
+                #test4 End:
+                #test3 <span id='llVGEnd'></span>
                 br
                 br
-                strong Websites
+                #test Purchases
                 br
-                p Page Name:
-                |  <span id='llVGCreator'></span>
-                p URL:
-                |  <span id='llVGCreator'></span>
+                #test2 Item:
+                #test3 <span id='llPurchaseItem'></span>
+                #test4 Location:
+                #test3 <span id='llPurchaseLocation'></span>
+                #test4 Cost:
+                #test3  <span id='llPurchaseCost'></span>
+                #test4 Time:
+                #test3 <span id='llPurchaseTime'></span>
                 br
                 br
-                p Day Rating:
-                |  <span id='llVGCreator'></span>
+                #test Websites
+                br
+                #test2 Page Name:
+                #test3  <span id='llWebsitePageName'></span>
+                #test4 URL:
+                #test3  <span id='llWebsiteURL'></span>
+                #test4 Time:
+                #test3  <span id='llWebsiteTime'></span>
+                br
+                br
+                #test Conversation
+                br
+                #test2 Person:
+                #test3  <span id='llConversationsPerson'></span>
+                #test4 Topic:
+                #test3  <span id='llConversationsTopic'></span>
+                #test4 Thoughts:
+                #test3  <span id='llConversationsThoughts'></span>
+                #test4 Location:
+                #test3  <span id='llConversationsLocation'></span>
+                #test4 Start:
+                #test3  <span id='llConversationsStart'></span>
+                #test4 End:
+                #test3  <span id='llConversationsEnd'></span>
+                br
+                br
+                #test Career
+                br
+                #test2 Task:
+                #test3  <span id='llCareerTask'></span>
+                #test4 Notes:
+                #test3  <span id='llCareerNotes'></span>
+                #test4 Completed:
+                #test3  <span id='llCareerCompleted'></span>
+                #test4 Start:
+                #test3  <span id='llCareerStart'></span>
+                #test4 End:
+                #test3  <span id='llCareerEnd'></span>
+                br
+                br
+                #test Hygein
+                br
+                #test2 Shower:
+                #test3  <span id='llHygeinShower'></span>
+                #test4 Start:
+                #test3  <span id='llHygeinShowerStart'></span>
+                #test4 End:
+                #test3  <span id='llHygeinShowerEnd'></span>
+                br
+                #test2 Brushteeth:
+                #test3  <span id='llHygeinBrushteeth'></span>
+                #test4 Floss:
+                #test3  <span id='llHygeinFloss'></span>
+                #test4 Start:
+                #test3  <span id='llHygeinBrushStart'></span>
+                #test4 End:
+                #test3  <span id='llHygeinBrushEnd'></span>
+                br
+                #test2 Nails:
+                #test3  <span id='llHygeinNails'></span>
+                #test4 Toenails:
+                #test3  <span id='llHygeinToenails'></span>
+                #test4 Start:
+                #test3  <span id='llHygeinNailsStart'></span>
+                #test4 End:
+                #test3  <span id='llHygeinNailsEnd'></span>
+                br
+                #test Sex
+                br
+                #test2 Person:
+                #test3  <span id='llSexPerson'></span>
+                #test4 Position:
+                #test3  <span id='llSexPosition'></span>
+                #test4 Rating:
+                #test3  <span id='llSexRating'></span>
+                #test4 Thoughts:
+                #test3  <span id='llSexThoughts'></span>
+                #test4 Location:
+                #test3  <span id='llSexLocation'></span>
+                #test4 Start:
+                #test3  <span id='llSexStart'></span>
+                #test4 End:
+                #test3  <span id='llSexEnd'></span>
+                br
+                #test Programming
+                br
+                #test2 Person:
+                #test3  <span id='llProgrammingTask'></span>
+                #test4 Difficulity:
+                #test3  <span id='llProgrammingDifficulity'></span>
+                #test4 Solution:
+                #test3  <span id='llProgrammingSolution'></span>
+                #test4 Start:
+                #test3  <span id='llProgrammingStart'></span>
+                #test4 End:
+                #test3  <span id='llProgrammingEnd'></span>
+                br
+                #test Writing
+                br
+                #test2 Entry:
+                #test3  <span id='llWritingEntry'></span>
+                #test4 Type:
+                #test3  <span id='llWritingType'></span>
+                br
+                #test Day Rating
+                br
+                #test2 Rating:
+                #test3  <span id='llDayRating'></span>
 
         // /USER INFO
 
