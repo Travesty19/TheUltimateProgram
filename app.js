@@ -10,6 +10,7 @@ var monk = require('monk');
 var uri = 'localhost:27017/UP';
 var uri = 'mongodb://heroku_9326dm9f:fkrpp027tq4dt4jrvrpfnu465d@ds019796.mlab.com:19796/heroku_9326dm9f';
 var db = monk(uri);
+var test = 'test';
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
