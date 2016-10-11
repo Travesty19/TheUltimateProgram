@@ -1,0 +1,201 @@
+extends layout
+
+block scripts
+    script(type='text/javascript').
+    script(src= '/javascript/global.js')
+
+
+block content
+
+    head
+        link(rel='stylesheet', href='/stylesheets/style-page.css')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+        
+    body
+        nav.o-home-nav
+            a.o-home-nav__link(href='/')
+                //i.fa.fa-arrow-left
+                .fa-1x Home 
+
+        nav.o-home-nav
+            if(loggedin === 1)
+                a.o-home-nav__link(href='/edit_comic')
+                    //i.fa.fa-arrow-left
+                    .fa-1x Create
+            else
+                a.o-home-nav__link(href='/login')
+                    //i.fa.fa-arrow-left
+                    .fa-1x Create
+
+        nav.o-header-nav
+            if(loggedin === 1)
+                a.o-header-nav__link(href='/manage_comics')
+                    //i.fa.fa-arrow-left
+                    .fa-1x Manage
+            else
+                a.o-header-nav__link(href='/login')
+                    //i.fa.fa-arrow-left
+                    .fa-1x Manage
+
+
+            if(loggedin === 1)
+                p.fa-1x-black Welcome, #{user_name}
+                a.o-header-nav__link(href='/logout')
+                    .fa-1x Log out
+                    //i.fa.fa-star
+            else
+                a.o-header-nav__link(href='/login')
+                    .fa-1x Log in
+                    //i.fa.fa-star
+                    
+        header.o-header
+            .o-container
+                a(href='/')
+                    h1.o-header__title Phocas
+        
+    
+    
+        
+        h2 Add User
+        #addUser
+            fieldset
+                input#inputDate(type='date', placeholder='Date')
+                br
+                p Sleep
+                input#inputSleepStart(type='time', placeholder='Start')
+                input#inputSleepEnd(type='time', placeholder='End')
+                br
+                p Exercise
+                input#inputExerciseActivity(type='text', placeholder='Activity')
+                input#inputExerciseReps(type='number', placeholder='Reps')
+                input#inputExerciseLocation(type='text', placeholder='Location')
+                input#inputExerciseStart(type='time', placeholder='Start')
+                input#inputExerciseEnd(type='time', placeholder='End')
+                br
+                p Diet
+                input#inputDietBreakfastFood(type='text', placeholder='BreakfastFood')
+                input#inputDietBreakfastHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietBreakfastCost(type='number', placeholder='Cost')
+                input#inputDietBreakfastLocation(type='text', placeholder='Location')
+                input#inputDietBreakfastStart(type='time', placeholder='Start')
+                input#inputDietBreakfastEnd(type='time', placeholder='End')
+
+                br
+                input#inputDietLunchFood(type='text', placeholder='LunchFood')
+                input#inputDietLunchHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietLunchCost(type='number', placeholder='Cost')
+                input#inputDietLunchLocation(type='text', placeholder='Location')
+                input#inputDietLunchStart(type='time', placeholder='Start')
+                input#inputDietLunchEnd(type='time', placeholder='End')
+                br
+                input#inputDietDinnerFood(type='text', placeholder='DinnerFood')
+                input#inputDietDinnerHealthScore(type='number', placeholder='HealthScore')
+                input#inputDietDinnerCost(type='number', placeholder='Cost')
+                input#inputDietDinnerLocation(type='text', placeholder='Location')
+                input#inputDietDinnerStart(type='time', placeholder='Start')
+                input#inputDietDinnerEnd(type='time', placeholder='End')
+                br
+                p Movies
+                input#inputMovieTitle(type='text', placeholder='Title')
+                input#inputMovieDirector(type='text', placeholder='Director')
+                input#inputMovieRating(type='number', placeholder='Rating (out of 10)')
+                input#inputMovieThoughts(type='text', placeholder='Thoughts')
+                input#inputMovieStart(type='time', placeholder='Start')
+                input#inputMovieEnd(type='time', placeholder='End')
+                br
+                p Music
+                input#inputMusicTitle(type='text', placeholder='Title')
+                input#inputMusicArtist(type='text', placeholder='Artist')
+                input#inputMusicRating(type='number', placeholder='Rating (out of 10)')
+                input#inputMusicThoughts(type='text', placeholder='Thoughts')
+                input#inputMusicStart(type='time', placeholder='Start')
+                input#inputMusicEnd(type='time', placeholder='End')
+                br
+                p Reading
+                input#inputReadingTitle(type='text', placeholder='Title')
+                input#inputReadingAuthor(type='text', placeholder='Author')
+                input#inputReadingRating(type='number', placeholder='Rating (out of 10)')
+                input#inputReadingThoughts(type='text', placeholder='Thoughts')
+                input#inputReadingStart(type='time', placeholder='Start')
+                input#inputReadingEnd(type='time', placeholder='End')
+                br
+                p Video Games
+                input#inputVGTitle(type='text', placeholder='Title')
+                input#inputVGCreator(type='text', placeholder='Creator')
+                input#inputVGRating(type='number', placeholder='Rating (out of 10)')
+                input#inputVGThoughts(type='text', placeholder='Thoughts')
+                input#inputVGAchivements(type='text', placeholder='Achivements')
+                input#inputVGStart(type='time', placeholder='Start')
+                input#inputVGEnd(type='time', placeholder='End')
+                br
+                p Purchases
+                input#inputPurchaseItem(type='text', placeholder='Item')
+                input#inputPurchaseLocation(type='text', placeholder='Location')
+                input#inputPurchaseCost(type='number', placeholder='Cost')
+                input#inputPurchaseTime(type='time', placeholder='Time')
+                br
+                p Websites
+                input#inputWebsitePageName(type='text', placeholder='PageName')
+                input#inputWebsiteURL(type='text', placeholder='URL')
+                input#inputWebsiteTime(type='time', placeholder='Time')
+                br
+                p Conversations
+                input#inputConversationPerson(type='text', placeholder='Person(s)')
+                input#inputConversationTopic(type='text', placeholder='Topic(s)')
+                input#inputConversationThoughts(type='number', placeholder='Thoughts')
+                input#inputConversationLocation(type='text', placeholder='Location')
+                input#inputConversationStart(type='time', placeholder='Start')
+                input#inputConversationEnd(type='time', placeholder='End')
+                br
+                p Career
+                input#inputCareerTask(type='text', placeholder='Task')
+                input#inputCareerNotes(type='text', placeholder='Notes')
+                input#inputCareerCompleted(type='number', placeholder='% Completed')
+                input#inputCareerStart(type='time', placeholder='Start')
+                input#inputCareerEnd(type='time', placeholder='End')
+                br
+                p Hygein
+                br
+                p Shower?
+                input#inputHygeinShower(type='text', placeholder='Shower? (y/n)')
+                input#inputHygeinShowerStart(type='time', placeholder='Start')
+                input#inputHygeinShowerEnd(type='time', placeholder='End')
+                br
+                input#inputHygeinBrushteeth(type='text', placeholder='Brushteeth?')
+                input#inputHygeinFloss(type='text', placeholder='Floss?')
+                input#inputHygeinBrushStart(type='time', placeholder='Start')
+                input#inputHygeinBrushEnd(type='time', placeholder='End')
+                br
+                input#inputHygeinNails(type='text', placeholder='Nails?')
+                input#inputHygeinToenails(type='text', placeholder='Toenails?')
+                input#inputHygeinNailsStart(type='time', placeholder='Start')
+                input#inputHygeinNailsEnd(type='time', placeholder='End')
+                br
+                p Sex
+                input#inputSexPerson(type='text', placeholder='Person')
+                input#inputSexPosition(type='text', placeholder='Position')
+                input#inputSexRating(type='number', placeholder='Rating')
+                input#inputSexThoughts(type='text', placeholder='Thoughts')
+                input#inputSexLocation(type='text', placeholder='Location')
+                input#inputSexStart(type='time', placeholder='Start')
+                input#inputSexEnd(type='time', placeholder='End')
+                br
+                p Programming
+                input#inputProgrammingTask(type='text', placeholder='Task')
+                input#inputProgrammingDifficulity(type='number', placeholder='Difficulity')
+                input#inputProgrammingSolution(type='text', placeholder='Solution')
+                input#inputProgrammingStart(type='time', placeholder='Start')
+                input#inputProgrammingEnd(type='time', placeholder='End')
+                br
+                p Writing 
+                input#inputWritingEntry(type='text', placeholder='Entry')
+                input#inputWritingType(type='text', placeholder='Type (Journal,ect)')
+                br
+                p Upload
+                input#inputUpload(type='text', placeholder='fileToUpload')
+                br
+                p Day Rating (1-10)
+                input#inputDayRating(type='number', placeholder='Rating')
+                br
+                br
+                button#btnAddUser Add User
