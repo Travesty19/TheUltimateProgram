@@ -11,4 +11,9 @@ router.get('/data', function(req, res, next) {
   res.render('data', { title: 'Data' });
 });
 
+/* GET home page. */
+router.get('/nav', function(req, res, next) {
+  res.render('nav', { title: 'Data' });
+});
+
 module.exports = router;

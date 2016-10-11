@@ -1,118 +1,410 @@
-body {
-  padding: 30px;
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+div#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    /*position:absolute;*/
+    width:100%;
+    /*padding:5px 0 10px;*/
+    /*overflow: auto;*/
+    zoom:1;
+}
+#prev {
+    line-height:30px;
+    /*background-color:#eeeeee;*/
+    /*height:600px;*/
+    /*width:100px;*/
+    float:left;
+    padding:15px;
+    vertical-align: middle;
+}
+#next {
+    line-height:30px;
+    /*background-color:#eeeeee;*/
+    /*height:600px;*/
+    /*width:100px;*/
+    float:right;
+    padding:15px;
+    text-align: center;
+    vertical-align: middle;
+}
+#create {
+    line-height:30px;
+    /*background-color:#eeeeee;*/
+    /*height:600px;*/
+    /*width:100px;*/
+    float:left;
+    padding:15px;
+    vertical-align: middle;
+}
+#edit {
+    line-height:30px;
+    /*background-color:#eeeeee;*/
+    /*height:600px;*/
+    /*width:100px;*/
+    float:left;
+    padding:15px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-h2 {
-	margin:0 0 .5em 0;
+#login{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:0px;
+    width:200px;
+    float:right;
+    padding:0px;
+    text-align: center;
 }
 
-a {
-  color: #00B7FF;
+#signup{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:0px;
+    width:500px;
+    float:right;
+    padding:0px;
+    text-align: center;
 }
 
+
+.createButton {
+    display: inline-block;
+    border-radius: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    vertical-align: middle;
+}
 #wrapper {
-	position:relative;
+    position:relative;
 }
 
 #userList {
-	margin:0 0 30px 0;
+    margin:0 0 30px 0;
 }
-	#userList table {
-		border-collapse:separate;
-		border-spacing:1px;
-		background:#CCC;
-		position: absolute;
-    	right: 0px;
-   		width: 300px;
-    	border: 3px solid #73AD21;
-    	padding: 10px;
-	}
-		#userList table th {
-			background:#EEE;
-			font-weight:600;
-			padding:10px 20px;
-			text-align:center;
-		}
-		#userList table tbody {
-			padding:0; margin:0;
-			border-collapse:collapse;
-			border-spacing:0px;
-		}
-			#userList table td {
-				background:#FFF;
-				padding:5px 10px;
-				text-align:center;
-			}
+    #userList table {
+        border-collapse:separate;
+        border-spacing:1px;
+        background:#CCC;
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+        #userList table th {
+            background:#EEE;
+            font-weight:600;
+            padding:10px 20px;
+            text-align:center;
+        }
+        #userList table tbody {
+            padding:0; margin:0;
+            border-collapse:collapse;
+            border-spacing:0px;
+        }
+            #userList table td {
+                background:#FFF;
+                padding:5px 10px;
+                text-align:center;
+            }
 
 #userInfo {
-	width:1000px;
-	position:absolute;
-	top:100; left:0;
+    width:1000px;
+    position:absolute;
+    top:100; left:0;
 }
-	#userInfo p {
-		padding:15px;
-		font-size: 150%;
-		
-	}
+    #userInfo p {
+        padding:15px;
+        font-size: 150%;
+        
+    }
 
 #title {
-	clear: left;
-    font-weight: bold;	
+    clear: left;
+    font-weight: bold;  
     padding-bottom: 20px;
     font-size: 125%;
 
 }
 
 #test {
-	clear: left;
-	text-decoration: underline;
+    clear: left;
+    text-decoration: underline;
     font-weight: bold;
     padding-top: 20px;
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 
 
 }
 
 #test0 {
-	clear: left;
-    font-weight: bold;	
+    clear: left;
+    font-weight: bold;  
     padding-bottom: 20px;
     font-style: italic;
 
 }
 
 #test1 {
-	clear: left;
+    clear: left;
     font-weight: bold;
-    padding-top: 50px;	
+    padding-top: 50px;  
     padding-bottom: 20px;
     font-style: italic;
 
 }
 
 #test2 {
-	display:inline-block;
-	padding-left: 5px;
+    display:inline-block;
+    padding-left: 5px;
 }
 
 #test3 {
-	color: red;
-	display:inline-block;
-	padding-left: 5px;
-	font-style: normal;
+    color: red;
+    display:inline-block;
+    padding-left: 5px;
+    font-style: normal;
 
-	
+    
 }
 
 #test4 {
-	display:inline-block;
-	padding-left: 20px;
+    display:inline-block;
+    padding-left: 20px;
+}
+.createButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
+.createButton span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
 
+.createButton:hover span {
+    padding-right: 25px;
+}
 
-fieldset {
-	border:0;
-	padding:0; margin:0;
+.createButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.editButton {
+    display: inline-block;
+    border-radius: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.editButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.editButton span:after {
+    content: '<<';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.editButton:hover span {
+    padding-left: 25px;
+}
+
+.editButton:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+.rateButton {
+    display: inline-block;
+    border-radius: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.rateButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.rateButton span:after {
+    content: '<<';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.raetButton:hover span {
+    padding-left: 25px;
+}
+
+.editButton:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+#section {
+    width:600px;
+    float:left;
+    padding:10px;
+    vertical-align: middle;
+}
+#footer {
+    /*background-color:black;*/
+    /*color:white;*/
+    clear:both;
+    text-align:center;
+    /*padding:5px;*/
+}
+.nextButton {
+    display: inline-block;
+    border-radius: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.nextButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.nextButton span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.nextButton:hover span {
+    padding-right: 25px;
+}
+
+.nextButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.prevButton {
+    display: inline-block;
+    border-radius: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.prevButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.prevButton span:after {
+    content: '<<';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.prevButton:hover span {
+    padding-left: 25px;
+}
+
+.prevButton:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+.uploadedImage {
+    width: 200px;
+    height: 200px;
+}
+
+#nav {
+    text-align:right;
+}
+
+#nav li {
+    display:inline;
+    margin: 0 0 0 5px;
+}
+
+#nav li a {
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+#comicSetTitleForImage {
+    display: none;
+}
+
+#allowEditCheckBox {
+    float:left;
 }
