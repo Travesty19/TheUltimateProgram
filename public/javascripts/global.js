@@ -161,13 +161,7 @@ function showUserInfo(event) {
     $('#llHygeinNailsStart').text(thisUserObject.hygeinnailsstart);
     $('#llHygeinNailsEnd').text(thisUserObject.hygeinnailsend);
 
-    $('#llSexPerson').text(thisUserObject.sexperson);
-    $('#llSexPosition').text(thisUserObject.sexposition);
-    $('#llSexRating').text(thisUserObject.sexrating);
-    $('#llSexThoughts').text(thisUserObject.sexthoughts);
-    $('#llSexLocation').text(thisUserObject.sexlocation);
-    $('#llSexStart').text(thisUserObject.sexstart);
-    $('#llSexEnd').text(thisUserObject.sexend);
+
 
     $('#llProgrammingTask').text(thisUserObject.programmingtask);
     $('#llProgrammingDifficulity').text(thisUserObject.programmingdifficulity);
@@ -290,14 +284,6 @@ function addUser(event) {
             'hygeintoenails': $('#addUser fieldset input#inputHygeinToenails').val(),
             'hygeinnailsstart': $('#addUser fieldset input#inputHygeinNailsStart').val(),
             'hygeinnailsend': $('#addUser fieldset input#inputHygeinNailsEnd').val(),
-
-            'sexperson': $('#addUser fieldset input#inputSexPerson').val(),
-            'sexposition': $('#addUser fieldset input#inputSexPosition').val(),
-            'sexrating': $('#addUser fieldset input#inputSexRating').val(),
-            'sexthoughts': $('#addUser fieldset input#inputSexThoughts').val(),
-            'sexlocation': $('#addUser fieldset input#inputSexLocation').val(),
-            'sexstart': $('#addUser fieldset input#inputSexStart').val(),
-            'sexend': $('#addUser fieldset input#inputSexEnd').val(),
 
             'programmingtask': $('#addUser fieldset input#inputProgrammingTask').val(),
             'programmingdifficulity': $('#addUser fieldset input#inputProgrammingDifficulity').val(),
