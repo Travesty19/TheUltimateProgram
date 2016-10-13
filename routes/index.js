@@ -3,17 +3,32 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Input' });
 });
 
 /* GET home page. */
 router.get('/data', function(req, res, next) {
-  res.render('data', { title: 'Data' });
+  res.render('data', { title: 'Data'});
 });
 
-/* GET home page. */
-router.get('/nav', function(req, res, next) {
-  res.render('nav', { title: 'Data' });
+router.get('/sort', function(req, res, next) {
+  var db = req.db;
+  var collection = db.get('userlist');
+  var userlist = [];
+  var ob = { action:"date", result:"1367263074"};
+  console.log(ob);
+  collection.find({}, {}, function (e, docs) {
+
+            res.render('sort', { title: 'Data', 
+					   json: docs   });
+
+         });
+
+});
+
+router.get('/sort2', function(req, res, next) {
+  res.render('sort2', { title: 'Data' 
+						});
 });
 
 module.exports = router;

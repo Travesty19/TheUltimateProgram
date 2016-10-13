@@ -1,0 +1,250 @@
+extends layout
+append head
+
+block scripts
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')
+    script(src='/javascript/paging.js')
+    script(type='text/javascript').
+ 
+    
+    script(src= '/javascript/global.js')    
+
+
+block content
+    head
+    link(rel='stylesheet', href='/stylesheets/style-page.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+        
+    body
+        nav.o-home-nav
+            a.o-home-nav__link(href='/')
+                //i.fa.fa-arrow-left
+                .fa-1x Input 
+
+            a.o-home-nav__link(href='/sort')
+                //i.fa.fa-arrow-left
+                .fa-1x Sort
+
+        nav.o-header-nav
+
+                a.o-home-nav__link(href='/data')
+                    //i.fa.fa-arrow-left
+                    .fa-1x Data
+                    
+        header.o-header
+            .o-container
+                a(href='/')
+                    h1.o-header__title The Ultimate Program
+   
+
+
+        .container
+            .table
+                table#mytable.sortable
+                    thead
+                        tr
+                        th#date Date
+                        th#sleepstart Sleep Start
+                        th#sleepend Sleep End
+                        th#exerciseactivity Exercise Activity
+                        th#exercisereps Exercise Reps
+                        th#exerciselocation Exercise Location
+                        th#exercisestart Exercise Start
+                        th#exerciseend Exercise End
+                        th#dietbreakfastfood Breakfast Food
+                        th#dietbreakfasthealthscore Breakfast Health Score
+                        th#dietbreakfastcost Breakfast Cost
+                        th#dietbreakfastlocation Breakfast Location
+                        th#dietbreakfaststart Breakfast Start
+                        th#dietbreakfastend Breakfast End
+                        th#dietlunchfood Lunch Food
+                        th#dietlunchhealthscore Lunch Health Score
+                        th#dietlunchcost Lunch Cost
+                        th#dietlunchlocation Lunch Location
+                        th#dietlunchstart Lunch Start
+                        th#dietlunchend Lunch End
+                        th#dietdinnerfood Dinner Food
+                        th#dietdinnerhealthscore Dinner Health Score
+                        th#dietdinnercost Dinner Cost
+                        th#dietdinnerlocation Dinner Location
+                        th#dietdinnerstart Dinner Start
+                        th#dietdinnerend Dinner End
+                        th#movietitle Movie Title
+                        th#moviedirector Movie Director
+                        th#movierating Movie Rating
+                        th#moviethoughts Movie Thoughts
+                        th#moviestart Movie Start
+                        th#movieend Movie End
+                        th#musictitle Music Title
+                        th#musicartist Music Artist
+                        th#musicrating Music Rating
+                        th#musicthoughts Music Thoughts
+                        th#musicstart Music Start
+                        th#musicend Music End
+                        th#readingtitle Reading Title
+                        th#readingauthor Reading Author
+                        th#readingrating Reading Rating
+                        th#readingthoughts Reading Thoughts
+                        th#readingstart Reading Start
+                        th#readingend Reading End
+                        th#vgtitle Video Game Title
+                        th#vgcreator Video Game Creator
+                        th#vgrating Video Game Rating
+                        th#vgthoughts Video Game Thoughts
+                        th#vgachivements Video Game Achivements
+                        th#vgstart Video Game Start
+                        th#vgend Video Game End
+                        th#purchaseitem Purchase Item
+                        th#purchaselocation Purchase Location
+                        th#purchasecost Purchase Cost
+                        th#purchasetime Purchase Time
+                        th#websitepagename Website Page Name
+                        th#websiteurl Website URL
+                        th#websitetime Website Time
+                        th#conversationperson Conversation Person
+                        th#conversationtopic Conversation Topics
+                        th#conversationthoughts Conversation Thoughts
+                        th#conversationlocation Conversation Location
+                        th#conversationstart Conversation Start
+                        th#conversationend Conversation End
+                        th#careertask Career Task
+                        th#careernotes Career Notes
+                        th#careercompleted Career Completed
+                        th#careerstart Career Start
+                        th#careerend Career End
+                        th#hygeinshower Hygein Shower
+                        th#hygeinshowerstart Hygein Shower Start
+                        th#hygeinshowerend Hygein Shower End
+                        th#hygeinbrushteeth Hygein Brush Teeth
+                        th#hygeinfloss Hygein Floos
+                        th#hygeinbrushstart Hygein Brush Start
+                        th#hygeinbrushend Hygein Brush End
+                        th#hygeinnails Hygein Nails
+                        th#hygeintoenails Hygein Toenails
+                        th#hygeinnailsstart Hygein Start
+                        th#hygeinnailsend Hygein End
+                        th#sexperson Sex Person
+                        th#sexposition Sex Position
+                        th#sexrating Sex Rating
+                        th#sexlocation Sex Location
+                        th#sexstart Sex Start
+                        th#sexend Sex End
+                        th#programmingtask Programming Task
+                        th#programmingdifficulity Programming Difficulity
+                        th#programmingsolution Programming Solution
+                        th#programmingstart Programming Start
+                        th#programmingend Programming End
+                        th#writingentry Writing Entry
+                        th#writingtype Writing Type
+                        th#dayrating Day Rating
+
+                    tbody
+                        each val in json
+                            tr
+                                td !{val.date}
+                                td !{val.sleepstart}
+                                td !{val.sleepend}
+                                td !{val.exerciseactivity}
+                                td !{val.exercisereps}
+                                td !{val.exerciselocation}
+                                td !{val.exercisestart}
+                                td !{val.exerciseend}
+                                td !{val.dietbreakfastfood}
+                                td !{val.dietbreakfasthealthscore}
+                                td !{val.dietbreakfastcost}
+                                td !{val.dietbreakfastlocation}
+                                td !{val.dietbreakfaststart}
+                                td !{val.dietbreakfastend}
+                                td !{val.dietlunchfood}
+                                td !{val.dietlunchhealthscore}
+                                td !{val.dietlunchcost}
+                                td !{val.dietlunchlocation}
+                                td !{val.dietlunchstart}
+                                td !{val.dietlunchend}
+                                td !{val.dietdinnerfood}
+                                td !{val.dietdinnerhealthscore}
+                                td !{val.dietdinnercost}
+                                td !{val.dietdinnerlocation}
+                                td !{val.dietdinnerstart}
+                                td !{val.dietdinnerend}
+                                td !{val.movietitle}
+                                td !{val.moviedirector}
+                                td !{val.movierating}
+                                td !{val.moviethoughts}
+                                td !{val.moviestart}
+                                td !{val.movieend}
+                                td !{val.musictitle}
+                                td !{val.musicartist}
+                                td !{val.musicrating}
+                                td !{val.musicthoughts}
+                                td !{val.musicstart}
+                                td !{val.musicend}
+                                td !{val.readingtitle}
+                                td !{val.readingauthor}
+                                td !{val.readingrating}
+                                td !{val.readingthoughts}
+                                td !{val.readingstart}
+                                td !{val.readingend}
+                                td !{val.vgtitle}
+                                td !{val.vgcreator}
+                                td !{val.vgrating}
+                                td !{val.vgthoughts}
+                                td !{val.vgachivements}
+                                td !{val.vgstart}
+                                td !{val.vgend}
+                                td !{val.purchaseitem}
+                                td !{val.purchaselocation}
+                                td !{val.purchasecost}
+                                td !{val.purchasetime}
+                                td !{val.websitepagename}
+                                td !{val.websiteurl}
+                                td !{val.websitetime}
+                                td !{val.conversationperson}
+                                td !{val.conversationtopic}
+                                td !{val.conversationthoughts}
+                                td !{val.conversationlocation}
+                                td !{val.conversationstart}
+                                td !{val.conversationend}
+                                td !{val.careertask}
+                                td !{val.careernotes}
+                                td !{val.careercompleted}
+                                td !{val.careerstart}
+                                td !{val.careerend}
+                                td !{val.hygeinshower}
+                                td !{val.hygeinshowerstart}
+                                td !{val.hygeinshowerend}
+                                td !{val.hygeinbrushteeth}
+                                td !{val.hygeinfloss}
+                                td !{val.hygeinbrushstart}
+                                td !{val.hygeinbrushend}
+                                td !{val.hygeinnails} 
+                                td !{val.hygeintoenails}
+                                td !{val.hygeinnailsstart}
+                                td !{val.hygeinnailsend}
+                                td !{val.sexperson}
+                                td !{val.sexposition} 
+                                td !{val.sexrating}
+                                td !{val.sexlocation}
+                                td !{val.sexstart}
+                                td !{val.sexend} 
+                                td !{val.programmingtask}
+                                td !{val.programmingdifficulity}
+                                td !{val.programmingsolution}
+                                td !{val.programmingstart}
+                                td !{val.programmingend}
+                                td !{val.writingentry}
+                                td !{val.writingtype}
+                                td !{val.dayrating}
+                        
+        input.prev(type='button', value='prev')
+        input.next(type='button', value='next')
+        
+
+
+
+
+
+
+            
+

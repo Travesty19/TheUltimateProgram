@@ -9,14 +9,20 @@ block content
 
     head
         link(rel='stylesheet', href='/stylesheets/style-page.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel='stylesheet', href='/stylesheets/font-awesome.css')
         
     body
         nav.o-home-nav
             a.o-home-nav__link(href='/')
                 //i.fa.fa-arrow-left
-                .fa-1x Input 
+                .fa-1x Input
 
+            a.o-home-nav__link(href='/sort')
+                //i.fa.fa-arrow-left
+                .fa-1x Sort 
+
+            
 
         nav.o-header-nav
 
@@ -49,6 +55,7 @@ block content
         #userInfo
             h2 Date: 
                 #test3 <span id='llDate'></span>
+                br
                 br
                 #test Sleep
                 br
